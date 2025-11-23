@@ -105,6 +105,13 @@ body {
   background: var(--accent-hover);
 }
 
+.btn:disabled {
+  background: #ccc;
+  color: #777;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
 /* --- Result Screen --- */
 .result-screen h2 {
   font-size: 1.6rem;
@@ -117,7 +124,7 @@ body {
 }
 
 /* --- Footer (styled like Deal Timer) --- */
-.footer {
+.quiz__footer {
   margin-top: 2rem;
   opacity: 0.6;
   font-size: 0.9rem;
