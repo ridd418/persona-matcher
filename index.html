@@ -4,7 +4,7 @@
     <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laptop Quiz</title>
+    <title></title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,10 +18,13 @@
 
 <div class="quiz">
     <header class="quiz__header">
-        <h1 class="quiz__title">💻 Find Your Laptop Persona</h1>
+        <h1 class="quiz__title" id="quiz__title"></h1>
     </header>
 
     <main class="quiz__container">
+        <div class="quiz-progress">
+            <div class="progress__fill"></div>
+        </div>
         <div id="quiz-screen" class="quiz-screen"></div>
         <div id="result-screen" class="result-screen hidden"></div>
     </main>

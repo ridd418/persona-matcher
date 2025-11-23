@@ -1,7 +1,8 @@
+// Pulls data from external JSON
 const getData = async () => {
     try {
         console.log('Loading quiz data...')
-        const res = await fetch('./data.json')
+        const res = await fetch('./data/data.json')
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`)
         const data = await res.json()
         console.log('Quiz data loaded.')
@@ -14,17 +15,16 @@ const getData = async () => {
 const QUIZ_DATA = await getData()
 console.log('App Ready!')
 
+// Reusable HTML selectors
 const quizScreen = document.getElementById("quiz-screen")
 const resultScreen = document.getElementById("result-screen")
+const progressFill = document.querySelector('.progress__fill')
 
-// const cardBuild = arr => {
-//     const obj = {}
-//     arr.forEach(e => {
-//         obj[e] = 0
-//     })
-//     return obj
-// }
+// Setting Page title and Quiz header
+document.title = QUIZ_DATA.title
+document.getElementById('quiz__title').textContent = QUIZ_DATA.header
 
+// Question Closure acts as a dynamic state manager
 const Question = () => {
     const values = {
         currentQIndex: 0,
@@ -59,6 +59,7 @@ const Question = () => {
     return {next, prev, get}
 }
 
+// Answer Closure acts as the main scoring engine
 const Answers = () => {
     const answerCache = []
     const scoreCard = QUIZ_DATA.traits.reduce((obj, item) => {
@@ -69,13 +70,15 @@ const Answers = () => {
     const showResult = () => {
         const highestTrait = Object.keys(scoreCard).reduce((highest, current) => scoreCard[current] > scoreCard[highest] ? current : highest)
         const result = QUIZ_DATA.results.find(item => item.primaryTrait === highestTrait)
+
         resultScreen.innerHTML = `
-            <h2>Your Laptop Persona</h2>
+            <h2>Your Persona:</h2>
             <p>${result.text}</p>
             <h3>Recommended Types:</h3>
             <p>${result.recommended}</p>
         `
         // console.log(highestTrait)
+        progressFill.parentElement.classList.add('hidden')
         quizScreen.classList.add('hidden')
         resultScreen.classList.remove('hidden')
     }
@@ -106,9 +109,19 @@ const Answers = () => {
     return {answered, goBack}
 }
 
+// Initializing instances
 const Q = Question()
 const A = Answers()
 
+// Handles progess bar update
+const updateProgress = () => {
+    const current = Q.get('currentQIndex') + 1 // 1-based
+    const total = QUIZ_DATA.questions.length
+    const pct = (current / total) * 100
+    progressFill.style.width = pct + "%"
+}
+
+// Rendering logic
 const renderQuestion = () => {
     const opts = Q.get('optionsArr').map(opt => `
             <div class="option" data-id="${opt.id}">
@@ -128,14 +141,18 @@ const renderQuestion = () => {
             </div>
         </div>
     `
+    updateProgress()
 }
 
+// Single EventListener to handle all click events
 quizScreen.addEventListener('click', (e) => {
     const id = e.target.id
     const dataId = e.target.dataset.id
+
     if (id !== 'backBtn' && !dataId) return
     if (id) A.goBack()
     if (Q.get('optionsIds').includes(dataId)) A.answered(dataId)
 })
 
+// Initializing Quiz by first render 
 renderQuestion()

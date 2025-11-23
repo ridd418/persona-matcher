@@ -1,4 +1,8 @@
 {
+  "title": "Laptop Quiz",
+
+  "header": "💻 Find Your Laptop Persona",
+
   "traits": ["PERF", "PORT", "BATT", "ECO", "PREM"],
 
   "questions": [

@@ -1,0 +1,79 @@
+{
+  "title": "Skincare Routine Quiz",
+  "header": "✨ Discover Your Skincare Persona",
+  "traits": ["HYDR", "OIL", "SENS", "BRIGHT", "ANTIAGE"],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What is your main skin concern?",
+      "options": [
+        { "id": "a", "text": "Dryness and tight skin", "scores": {"HYDR": 2} },
+        { "id": "b", "text": "Excess oil and shine", "scores": {"OIL": 2} },
+        { "id": "c", "text": "Sensitivity and redness", "scores": {"SENS": 2} },
+        { "id": "d", "text": "Dullness and uneven tone", "scores": {"BRIGHT": 2} }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Which product type do you prioritize?",
+      "options": [
+        { "id": "a", "text": "Hydrating creams and serums", "scores": {"HYDR": 2} },
+        { "id": "b", "text": "Oil-control or mattifying products", "scores": {"OIL": 2} },
+        { "id": "c", "text": "Gentle, calming skincare", "scores": {"SENS": 2} },
+        { "id": "d", "text": "Brightening and radiance boosters", "scores": {"BRIGHT": 2} }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "How do you approach anti-aging?",
+      "options": [
+        { "id": "a", "text": "I focus mostly on hydration", "scores": {"HYDR": 1, "ANTIAGE": 1} },
+        { "id": "b", "text": "I balance oil and anti-aging care", "scores": {"OIL": 1, "ANTIAGE": 1} },
+        { "id": "c", "text": "I use very gentle anti-aging routines", "scores": {"SENS": 1, "ANTIAGE": 1} },
+        { "id": "d", "text": "I aim for glowing, youthful skin", "scores": {"BRIGHT": 1, "ANTIAGE": 1} }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Which best describes your skincare style?",
+      "options": [
+        { "id": "a", "text": "Hydration-first and minimal", "scores": {"HYDR": 2} },
+        { "id": "b", "text": "Oil-control and routine-focused", "scores": {"OIL": 2} },
+        { "id": "c", "text": "Sensitive-friendly and cautious", "scores": {"SENS": 2} },
+        { "id": "d", "text": "Brightening and aesthetic-focused", "scores": {"BRIGHT": 2} }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "hydration_lover",
+      "primaryTrait": "HYDR",
+      "text": "You’re a Hydration Lover: Your skin craves moisture and softness.",
+      "recommended": "Hyaluronic acid serums, moisturizers, hydrating masks."
+    },
+    {
+      "id": "oil_controller",
+      "primaryTrait": "OIL",
+      "text": "You’re an Oil Controller: You want shine-free, balanced skin.",
+      "recommended": "Clay masks, niacinamide, lightweight gels."
+    },
+    {
+      "id": "sensitive_soul",
+      "primaryTrait": "SENS",
+      "text": "You’re a Sensitive Soul: Your skin needs gentle, soothing care.",
+      "recommended": "Fragrance-free products, calming creams, barrier support."
+    },
+    {
+      "id": "bright_seeker",
+      "primaryTrait": "BRIGHT",
+      "text": "You’re a Bright Seeker: You want radiant, glowing skin.",
+      "recommended": "Vitamin C serums, exfoliation, brightening moisturizers."
+    },
+    {
+      "id": "anti_ager",
+      "primaryTrait": "ANTIAGE",
+      "text": "You’re Anti-Age Focused: You prioritize long-term youthfulness.",
+      "recommended": "Retinol, peptides, antioxidants, firming creams."
+    }
+  ]
+}

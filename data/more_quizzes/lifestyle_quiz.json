@@ -1,0 +1,280 @@
+{
+  "title": "Ultimate Lifestyle Quiz",
+  "header": "🌟 Discover Your Ultimate Lifestyle Persona",
+  "traits": ["ADVENTURE", "COMF", "STYLE", "TECH", "TREND", "LUX", "ECO", "SPORTY", "CREATIVE"],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What's your ideal morning routine?",
+      "options": [
+        { "id": "a", "text": "Go for a jog outdoors", "scores": {"ADVENTURE": 2, "SPORTY": 2} },
+        { "id": "b", "text": "Meditate with a cup of tea", "scores": {"COMF": 2, "CREATIVE": 1} },
+        { "id": "c", "text": "Check the latest tech news", "scores": {"TECH": 3} },
+        { "id": "d", "text": "Pick the trendiest outfit", "scores": {"STYLE": 2, "TREND": 1} }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Which activity excites you most?",
+      "options": [
+        { "id": "a", "text": "Hiking in remote locations", "scores": {"ADVENTURE": 3, "SPORTY": 1} },
+        { "id": "b", "text": "Exploring new cafes or boutique stores", "scores": {"TREND": 2, "STYLE": 1} },
+        { "id": "c", "text": "Creating art or music", "scores": {"CREATIVE": 3} },
+        { "id": "d", "text": "Testing new gadgets or apps", "scores": {"TECH": 2, "COMF": 1} }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "How do you usually spend weekends?",
+      "options": [
+        { "id": "a", "text": "Outdoor adventures", "scores": {"ADVENTURE": 2, "SPORTY": 1} },
+        { "id": "b", "text": "Relaxing at home", "scores": {"COMF": 3} },
+        { "id": "c", "text": "Shopping for the latest fashion", "scores": {"STYLE": 2, "TREND": 2} },
+        { "id": "d", "text": "Attending workshops or creative classes", "scores": {"CREATIVE": 2, "TECH": 1} }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Pick a dream vacation:",
+      "options": [
+        { "id": "a", "text": "Backpacking through mountains", "scores": {"ADVENTURE": 3, "SPORTY": 1} },
+        { "id": "b", "text": "Luxury beach resort", "scores": {"LUX": 3, "COMF": 1} },
+        { "id": "c", "text": "City tour exploring trendy spots", "scores": {"TREND": 2, "STYLE": 2} },
+        { "id": "d", "text": "Digital detox at a creative retreat", "scores": {"CREATIVE": 3, "COMF": 1} }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "Your favorite shoes are:",
+      "options": [
+        { "id": "a", "text": "Hiking boots", "scores": {"ADVENTURE": 2, "SPORTY": 2} },
+        { "id": "b", "text": "Designer sneakers", "scores": {"STYLE": 2, "TREND": 2, "LUX": 1} },
+        { "id": "c", "text": "Comfy slippers", "scores": {"COMF": 3} },
+        { "id": "d", "text": "Eco-friendly sneakers", "scores": {"ECO": 3, "COMF": 1} },
+        { "id": "e", "text": "Smart shoes with tech", "scores": {"TECH": 3, "STYLE": 1} }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "Your ideal home features:",
+      "options": [
+        { "id": "a", "text": "Adventure-themed décor", "scores": {"ADVENTURE": 2, "CREATIVE": 1} },
+        { "id": "b", "text": "Cozy and comfortable spaces", "scores": {"COMF": 3} },
+        { "id": "c", "text": "Modern smart-home tech", "scores": {"TECH": 3} },
+        { "id": "d", "text": "Designer furniture and trendy colors", "scores": {"STYLE": 2, "TREND": 2} },
+        { "id": "e", "text": "Eco-conscious design", "scores": {"ECO": 3} }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "Pick a pet:",
+      "options": [
+        { "id": "a", "text": "Energetic dog for adventures", "scores": {"ADVENTURE": 2, "SPORTY": 2} },
+        { "id": "b", "text": "Relaxed cat", "scores": {"COMF": 2, "CREATIVE": 1} },
+        { "id": "c", "text": "Exotic or stylish pet", "scores": {"STYLE": 2, "TREND": 1} },
+        { "id": "d", "text": "Pet that uses a smart feeder or tracker", "scores": {"TECH": 2} }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Choose your perfect outfit:",
+      "options": [
+        { "id": "a", "text": "Functional sportswear", "scores": {"SPORTY": 3, "COMF": 1} },
+        { "id": "b", "text": "Designer pieces", "scores": {"LUX": 2, "STYLE": 2} },
+        { "id": "c", "text": "Eco-friendly casuals", "scores": {"ECO": 3, "COMF": 1} },
+        { "id": "d", "text": "Trendy streetwear", "scores": {"TREND": 3, "STYLE": 1} }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "Favorite weekend hobby:",
+      "options": [
+        { "id": "a", "text": "Hiking or outdoor sports", "scores": {"ADVENTURE": 2, "SPORTY": 2} },
+        { "id": "b", "text": "Relaxing with comfort activities", "scores": {"COMF": 2} },
+        { "id": "c", "text": "Shopping and fashion hunting", "scores": {"STYLE": 2, "TREND": 2} },
+        { "id": "d", "text": "Tinkering with tech or gadgets", "scores": {"TECH": 3} },
+        { "id": "e", "text": "Painting, writing, or creative projects", "scores": {"CREATIVE": 3} }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "Which describes your social life?",
+      "options": [
+        { "id": "a", "text": "Adventure trips with friends", "scores": {"ADVENTURE": 2, "SPORTY": 1} },
+        { "id": "b", "text": "Quiet nights at home", "scores": {"COMF": 2, "CREATIVE": 1} },
+        { "id": "c", "text": "Attending fashion or tech events", "scores": {"STYLE": 2, "TECH": 1, "TREND": 1} },
+        { "id": "d", "text": "Exclusive luxury gatherings", "scores": {"LUX": 3} }
+      ]
+    },
+    {
+      "id": "q11",
+      "text": "Pick a favorite drink:",
+      "options": [
+        { "id": "a", "text": "Energy drink for adventure", "scores": {"ADVENTURE": 2, "SPORTY": 1} },
+        { "id": "b", "text": "Herbal tea for relaxation", "scores": {"COMF": 2, "CREATIVE": 1} },
+        { "id": "c", "text": "Trendy cocktail", "scores": {"TREND": 2, "STYLE": 1} },
+        { "id": "d", "text": "Premium wine or champagne", "scores": {"LUX": 3} },
+        { "id": "e", "text": "Green smoothies for sustainability", "scores": {"ECO": 2} }
+      ]
+    },
+    {
+      "id": "q12",
+      "text": "Work style you prefer:",
+      "options": [
+        { "id": "a", "text": "Active and on-the-go", "scores": {"SPORTY": 2, "ADVENTURE": 1} },
+        { "id": "b", "text": "Comfortable, flexible environment", "scores": {"COMF": 3} },
+        { "id": "c", "text": "Creative and innovative", "scores": {"CREATIVE": 3} },
+        { "id": "d", "text": "High-tech and gadget-friendly", "scores": {"TECH": 3} },
+        { "id": "e", "text": "Luxury office with style", "scores": {"LUX": 2, "STYLE": 1} }
+      ]
+    },
+    {
+      "id": "q13",
+      "text": "Travel preference:",
+      "options": [
+        { "id": "a", "text": "Adventure and exploration", "scores": {"ADVENTURE": 3, "SPORTY": 2} },
+        { "id": "b", "text": "Comfortable relaxation", "scores": {"COMF": 3} },
+        { "id": "c", "text": "Stylish city escapes", "scores": {"STYLE": 2, "TREND": 2} },
+        { "id": "d", "text": "Tech-heavy travel with gadgets", "scores": {"TECH": 3} },
+        { "id": "e", "text": "Eco-friendly eco-tourism", "scores": {"ECO": 3} }
+      ]
+    },
+    {
+      "id": "q14",
+      "text": "Pick a weekend purchase:",
+      "options": [
+        { "id": "a", "text": "Outdoor gear", "scores": {"ADVENTURE": 2, "SPORTY": 1} },
+        { "id": "b", "text": "Comfy home goods", "scores": {"COMF": 2} },
+        { "id": "c", "text": "Fashionable clothing", "scores": {"STYLE": 2, "TREND": 2} },
+        { "id": "d", "text": "Tech gadgets", "scores": {"TECH": 3} },
+        { "id": "e", "text": "Luxury items", "scores": {"LUX": 3} },
+        { "id": "f", "text": "Eco-friendly products", "scores": {"ECO": 3} }
+      ]
+    },
+    {
+      "id": "q15",
+      "text": "Choose your footwear:",
+      "options": [
+        { "id": "a", "text": "Trail shoes", "scores": {"ADVENTURE": 2, "SPORTY": 2} },
+        { "id": "b", "text": "Designer heels or sneakers", "scores": {"STYLE": 2, "TREND": 2, "LUX": 1} },
+        { "id": "c", "text": "Comfy flats", "scores": {"COMF": 3} },
+        { "id": "d", "text": "Tech-enhanced sneakers", "scores": {"TECH": 3, "SPORTY": 1} },
+        { "id": "e", "text": "Eco-friendly shoes", "scores": {"ECO": 3} }
+      ]
+    },
+    {
+      "id": "q16",
+      "text": "Evening entertainment:",
+      "options": [
+        { "id": "a", "text": "Hiking or sports activity", "scores": {"ADVENTURE": 2, "SPORTY": 2} },
+        { "id": "b", "text": "Relax at home", "scores": {"COMF": 2} },
+        { "id": "c", "text": "Fashion shows or trendy events", "scores": {"STYLE": 2, "TREND": 2} },
+        { "id": "d", "text": "Gadget or creative projects", "scores": {"TECH": 2, "CREATIVE": 2} },
+        { "id": "e", "text": "Luxury experiences", "scores": {"LUX": 3} }
+      ]
+    },
+    {
+      "id": "q17",
+      "text": "Favorite social media content:",
+      "options": [
+        { "id": "a", "text": "Adventure travel blogs", "scores": {"ADVENTURE": 2, "TREND": 1} },
+        { "id": "b", "text": "Comfort lifestyle tips", "scores": {"COMF": 2} },
+        { "id": "c", "text": "Fashion and style influencers", "scores": {"STYLE": 2, "TREND": 2} },
+        { "id": "d", "text": "Tech reviews", "scores": {"TECH": 3} },
+        { "id": "e", "text": "Creative tutorials", "scores": {"CREATIVE": 3} },
+        { "id": "f", "text": "Eco-living content", "scores": {"ECO": 3} }
+      ]
+    },
+    {
+      "id": "q18",
+      "text": "Your ideal weekend outfit:",
+      "options": [
+        { "id": "a", "text": "Adventure-ready clothes", "scores": {"ADVENTURE": 2, "SPORTY": 2} },
+        { "id": "b", "text": "Casual cozy wear", "scores": {"COMF": 2} },
+        { "id": "c", "text": "High-fashion trendy wear", "scores": {"STYLE": 2, "TREND": 2} },
+        { "id": "d", "text": "Tech-inspired wearables", "scores": {"TECH": 2, "CREATIVE": 1} },
+        { "id": "e", "text": "Eco-friendly outfits", "scores": {"ECO": 3} }
+      ]
+    },
+    {
+      "id": "q19",
+      "text": "Which accessory speaks to you?",
+      "options": [
+        { "id": "a", "text": "Adventure gear or watches", "scores": {"ADVENTURE": 2, "SPORTY": 1} },
+        { "id": "b", "text": "Comfy socks and slippers", "scores": {"COMF": 2} },
+        { "id": "c", "text": "Designer bags or jewelry", "scores": {"STYLE": 2, "LUX": 2} },
+        { "id": "d", "text": "Smart devices", "scores": {"TECH": 3} },
+        { "id": "e", "text": "Creative arts or tools", "scores": {"CREATIVE": 2} },
+        { "id": "f", "text": "Eco-friendly items", "scores": {"ECO": 3} }
+      ]
+    },
+    {
+      "id": "q20",
+      "text": "Final question: What's most important in life?",
+      "options": [
+        { "id": "a", "text": "Thrilling experiences", "scores": {"ADVENTURE": 3, "SPORTY": 1} },
+        { "id": "b", "text": "Comfort and peace", "scores": {"COMF": 3} },
+        { "id": "c", "text": "Style and recognition", "scores": {"STYLE": 2, "TREND": 2, "LUX": 1} },
+        { "id": "d", "text": "Innovation and technology", "scores": {"TECH": 3} },
+        { "id": "e", "text": "Creativity and expression", "scores": {"CREATIVE": 3} },
+        { "id": "f", "text": "Sustainability and ethics", "scores": {"ECO": 3} }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "adventurer",
+      "primaryTrait": "ADVENTURE",
+      "text": "You’re an Adventurer: You thrive on exploration and thrilling experiences.",
+      "recommended": "Backpacking, hiking gear, adventure-ready shoes and clothing."
+    },
+    {
+      "id": "comfort_seeker",
+      "primaryTrait": "COMF",
+      "text": "You’re a Comfort Seeker: You value relaxation and coziness above all.",
+      "recommended": "Comfy footwear, cozy home, and stress-free routines."
+    },
+    {
+      "id": "style_icon",
+      "primaryTrait": "STYLE",
+      "text": "You’re a Style Icon: Fashion and presentation are your passion.",
+      "recommended": "Designer brands, high-fashion clothing, stylish footwear."
+    },
+    {
+      "id": "tech_enthusiast",
+      "primaryTrait": "TECH",
+      "text": "You’re a Tech Enthusiast: Gadgets and smart solutions excite you.",
+      "recommended": "Smart devices, wearable tech, innovative tools."
+    },
+    {
+      "id": "trend_chaser",
+      "primaryTrait": "TREND",
+      "text": "You’re a Trend Chaser: You love keeping up with what's current and fashionable.",
+      "recommended": "Trendy sneakers, streetwear, latest accessories."
+    },
+    {
+      "id": "lux_lifestyler",
+      "primaryTrait": "LUX",
+      "text": "You’re a Luxury Lifestyler: Premium quality and exclusivity matter most.",
+      "recommended": "Luxury footwear, designer brands, high-end gadgets."
+    },
+    {
+      "id": "eco_warrior",
+      "primaryTrait": "ECO",
+      "text": "You’re an Eco Warrior: Sustainability and environmental impact guide your choices.",
+      "recommended": "Eco-friendly shoes, sustainable fashion, green products."
+    },
+    {
+      "id": "athletic_spirit",
+      "primaryTrait": "SPORTY",
+      "text": "You’re Sporty and Active: Movement and physical challenges energize you.",
+      "recommended": "Sports shoes, activewear, outdoor equipment."
+    },
+    {
+      "id": "creative_mind",
+      "primaryTrait": "CREATIVE",
+      "text": "You’re a Creative Mind: You thrive on self-expression and innovation.",
+      "recommended": "Customizable shoes, artistic tools, creative workshops."
+    }
+  ]
+}

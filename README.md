@@ -103,7 +103,95 @@ or use **VSCode Live Sever** extension (not tested)
 3. Your persona appears instantly
     
 4. Recommendations are displayed based on your score profile
-    
----
 
 Thats it!
+
+---
+
+## 🧩 Customization
+
+### 🔧 Edit Questions / Traits
+
+All quiz content lives in `quiz-data.js`.
+
+Example structure:
+
+```json
+{
+  "id": "q1",
+  "text": "What frustrates you the most?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Slow performance",
+      "scores": {"PERF": 2}
+    }
+  ]
+}
+```
+
+You can add/remove:
+
+- Questions
+    
+- Options
+    
+- Traits
+    
+- Results
+    
+
+No other file needs to change.
+
+---
+
+## 🧬 JSON Schema
+
+### Question Object
+
+```ts
+Question {
+  id: string,
+  text: string,
+  options: Option[]
+}
+```
+
+### Option Object
+
+```ts
+Option {
+  id: string,
+  text: string,
+  scores: { [traitKey: string]: number }
+}
+```
+
+### Result Persona Object
+
+```ts
+Result {
+  id: string,
+  primaryTrait: string,
+  text: string,
+  recommended: string
+}
+```
+
+The engine is **trait-agnostic** — add as many traits as you want.
+
+*(More **template quizzes** are available at **./data/more_quizzes**, rename as **data.json** and drop it in **./data** directory.)*
+
+---
+
+## ⭐ Acknowledgments
+
+Inspired by:
+
+- Personality profiling systems (MBTI, Enneagram)
+    
+- Modern product recommendation UX
+    
+- Preference-based scoring engines
+    
+---

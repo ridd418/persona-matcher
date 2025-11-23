@@ -1,0 +1,79 @@
+{
+  "title": "Phone Quiz",
+  "header": "📱 Discover Your Phone Persona",
+  "traits": ["PERF", "CAM", "BAT", "DESIGN", "VALUE"],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What is your main priority when choosing a phone?",
+      "options": [
+        { "id": "a", "text": "Blazing speed and performance", "scores": {"PERF": 2} },
+        { "id": "b", "text": "High-quality photos and videos", "scores": {"CAM": 2} },
+        { "id": "c", "text": "Battery life that lasts all day", "scores": {"BAT": 2} },
+        { "id": "d", "text": "Sleek, stylish design", "scores": {"DESIGN": 2} }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Which feature excites you most?",
+      "options": [
+        { "id": "a", "text": "Fast processing & gaming capabilities", "scores": {"PERF": 2} },
+        { "id": "b", "text": "Professional-grade camera", "scores": {"CAM": 2} },
+        { "id": "c", "text": "All-day battery endurance", "scores": {"BAT": 2} },
+        { "id": "d", "text": "Unique design and premium feel", "scores": {"DESIGN": 1, "VALUE": 1} }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "How do you generally use your phone?",
+      "options": [
+        { "id": "a", "text": "Power-user multitasking", "scores": {"PERF": 2} },
+        { "id": "b", "text": "Photography and social media", "scores": {"CAM": 2} },
+        { "id": "c", "text": "Long calls, browsing, and streaming", "scores": {"BAT": 2} },
+        { "id": "d", "text": "Simple tasks with occasional style points", "scores": {"DESIGN": 1, "VALUE": 1} }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "What matters most for value?",
+      "options": [
+        { "id": "a", "text": "Top-tier specs no matter the cost", "scores": {"PERF": 1, "VALUE": 1} },
+        { "id": "b", "text": "Camera quality justifies the price", "scores": {"CAM": 1, "VALUE": 1} },
+        { "id": "c", "text": "Battery and reliability offer peace of mind", "scores": {"BAT": 1, "VALUE": 1} },
+        { "id": "d", "text": "A stylish device for the price is key", "scores": {"DESIGN": 1, "VALUE": 1} }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "speedster",
+      "primaryTrait": "PERF",
+      "text": "You’re a Speedster: You demand top performance and zero lag.",
+      "recommended": "Gaming phones, flagship Androids, high-performance devices."
+    },
+    {
+      "id": "photographer",
+      "primaryTrait": "CAM",
+      "text": "You’re a Photographer: You want the best camera for photos and videos.",
+      "recommended": "Camera-focused flagships, iPhone, Pixel."
+    },
+    {
+      "id": "long_runner",
+      "primaryTrait": "BAT",
+      "text": "You’re a Long Runner: All-day battery life is crucial.",
+      "recommended": "Phones with large batteries and optimized efficiency."
+    },
+    {
+      "id": "style_seeker",
+      "primaryTrait": "DESIGN",
+      "text": "You’re a Style Seeker: Sleek design and premium look matter most.",
+      "recommended": "Premium flagships, foldables, and designer editions."
+    },
+    {
+      "id": "budget_wise",
+      "primaryTrait": "VALUE",
+      "text": "You’re Budget Wise: You look for the best features for the price.",
+      "recommended": "Mid-range phones with balanced specs and value."
+    }
+  ]
+}

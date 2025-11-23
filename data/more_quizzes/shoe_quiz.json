@@ -1,0 +1,114 @@
+{
+  "title": "Shoe Persona Quiz",
+  "header": "👟 Discover Your Shoe Persona",
+  "traits": ["COMF", "STYLE", "PERF", "TREND", "LUX", "ECO", "SPORTY"],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What matters most when picking shoes?",
+      "options": [
+        { "id": "a", "text": "Comfort above all", "scores": {"COMF": 3} },
+        { "id": "b", "text": "Fashionable design", "scores": {"STYLE": 2, "TREND": 1} },
+        { "id": "c", "text": "Durability and performance", "scores": {"PERF": 2} },
+        { "id": "d", "text": "Eco-friendly materials", "scores": {"ECO": 2} },
+        { "id": "e", "text": "Luxury brand and premium feel", "scores": {"LUX": 3} }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "How often do you buy new shoes?",
+      "options": [
+        { "id": "a", "text": "Rarely, only when necessary", "scores": {"COMF": 1, "ECO": 1} },
+        { "id": "b", "text": "Seasonally to match fashion", "scores": {"STYLE": 2, "TREND": 2} },
+        { "id": "c", "text": "Whenever a new performance model comes out", "scores": {"PERF": 3, "SPORTY": 1} },
+        { "id": "d", "text": "Luxury or limited editions", "scores": {"LUX": 3, "STYLE": 1} }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Which activity is your priority when wearing shoes?",
+      "options": [
+        { "id": "a", "text": "Walking or standing all day", "scores": {"COMF": 3} },
+        { "id": "b", "text": "Turning heads with style", "scores": {"STYLE": 2, "TREND": 2} },
+        { "id": "c", "text": "Sports or workouts", "scores": {"PERF": 2, "SPORTY": 3} },
+        { "id": "d", "text": "Showing status", "scores": {"LUX": 3} },
+        { "id": "e", "text": "Supporting sustainability", "scores": {"ECO": 3} }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "How do you feel about trends?",
+      "options": [
+        { "id": "a", "text": "I avoid trends, comfort first", "scores": {"COMF": 2, "TREND": -1} },
+        { "id": "b", "text": "I follow trends selectively", "scores": {"STYLE": 2, "TREND": 1} },
+        { "id": "c", "text": "I chase every hot trend", "scores": {"TREND": 3, "STYLE": 2} },
+        { "id": "d", "text": "Trends don’t matter if it’s sustainable", "scores": {"ECO": 2, "TREND": -1} }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "What type of shoes do you usually buy?",
+      "options": [
+        { "id": "a", "text": "Casual sneakers for everyday wear", "scores": {"COMF": 2, "STYLE": 1} },
+        { "id": "b", "text": "Designer or statement shoes", "scores": {"LUX": 3, "STYLE": 2} },
+        { "id": "c", "text": "High-performance athletic shoes", "scores": {"PERF": 3, "SPORTY": 2} },
+        { "id": "d", "text": "Eco-conscious sneakers or recycled materials", "scores": {"ECO": 3, "COMF": 1} },
+        { "id": "e", "text": "Limited edition, trendy kicks", "scores": {"TREND": 3, "LUX": 1} }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "How do you react to price?",
+      "options": [
+        { "id": "a", "text": "Price doesn’t matter, comfort is key", "scores": {"COMF": 2, "LUX": 1} },
+        { "id": "b", "text": "I invest in trendy or designer shoes", "scores": {"LUX": 3, "TREND": 2} },
+        { "id": "c", "text": "I prefer budget-friendly options", "scores": {"ECO": 2, "STYLE": -1} },
+        { "id": "d", "text": "I spend on performance and sports shoes", "scores": {"PERF": 2, "SPORTY": 2} }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "comfort_seeker",
+      "primaryTrait": "COMF",
+      "text": "You’re a Comfort Seeker: Shoes must feel great all day.",
+      "recommended": "Everyday sneakers, cushioned loafers, orthopedic-friendly shoes."
+    },
+    {
+      "id": "style_icon",
+      "primaryTrait": "STYLE",
+      "text": "You’re a Style Icon: You love fashionable and stylish shoes.",
+      "recommended": "Designer sneakers, statement shoes, fashion-forward collections."
+    },
+    {
+      "id": "performance_athlete",
+      "primaryTrait": "PERF",
+      "text": "You’re a Performance Athlete: You want shoes built for optimal functionality.",
+      "recommended": "High-performance trainers, running shoes, sports-specific footwear."
+    },
+    {
+      "id": "trend_chaser",
+      "primaryTrait": "TREND",
+      "text": "You’re a Trend Chaser: Always chasing the latest styles.",
+      "recommended": "Limited edition sneakers, hype releases, trendy kicks."
+    },
+    {
+      "id": "luxury_lover",
+      "primaryTrait": "LUX",
+      "text": "You’re a Luxury Lover: Premium shoes and high-status brands appeal to you.",
+      "recommended": "Luxury designer shoes, exclusive collections, high-end leather shoes."
+    },
+    {
+      "id": "eco_conscious",
+      "primaryTrait": "ECO",
+      "text": "You’re Eco-Conscious: Sustainability is a priority in footwear.",
+      "recommended": "Recycled materials, eco-friendly brands, vegan shoes."
+    },
+    {
+      "id": "sporty_enthusiast",
+      "primaryTrait": "SPORTY",
+      "text": "You’re a Sporty Enthusiast: You value active, functional, athletic footwear.",
+      "recommended": "Running shoes, sneakers for training, multifunctional sports shoes."
+    }
+  ]
+}

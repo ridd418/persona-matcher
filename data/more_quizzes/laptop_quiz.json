@@ -1,0 +1,93 @@
+{
+  "title": "Laptop Quiz",
+
+  "header": "💻 Find Your Laptop Persona",
+
+  "traits": ["PERF", "PORT", "BATT", "ECO", "PREM"],
+
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What frustrates you the most when using a laptop?",
+      "options": [
+        { "id": "a", "text": "Slow or laggy performance", "scores": {"PERF": 2} },
+        { "id": "b", "text": "Heavy or bulky devices", "scores": {"PORT": 2} },
+        { "id": "c", "text": "Constantly needing to charge", "scores": {"BATT": 2} },
+        { "id": "d", "text": "Complicated or inconsistent software", "scores": {"ECO": 2} }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "What do you value most when buying tech?",
+      "options": [
+        { "id": "a", "text": "Raw power and capability", "scores": {"PERF": 2} },
+        { "id": "b", "text": "Lightweight design and mobility", "scores": {"PORT": 2} },
+        { "id": "c", "text": "Long-lasting reliability", "scores": {"BATT": 2} },
+        { "id": "d", "text": "Simple and intuitive user experience", "scores": {"ECO": 2} }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "How do you typically use your laptop?",
+      "options": [
+        { "id": "a", "text": "Multitasking and demanding software", "scores": {"PERF": 2} },
+        { "id": "b", "text": "Working on the go", "scores": {"PORT": 2} },
+        { "id": "c", "text": "Long sessions away from outlets", "scores": {"BATT": 2} },
+        { "id": "d", "text": "Light productivity only", "scores": {"ECO": 1, "PREM": 1} }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Which style matches you best?",
+      "options": [
+        { "id": "a", "text": "Practical and functional", "scores": {} },
+        { "id": "b", "text": "Modern and minimalistic", "scores": {"PORT": 1, "ECO": 1, "PREM": 1} },
+        { "id": "c", "text": "Trendy and polished", "scores": {"PREM": 2} },
+        { "id": "d", "text": "Rugged and durable", "scores": {"BATT": 1} }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "What describes your software preference?",
+      "options": [
+        { "id": "a", "text": "Freedom to customize everything", "scores": {"PERF": 1, "ECO": -1} },
+        { "id": "b", "text": "Balanced simplicity with flexibility", "scores": {"ECO": 1} },
+        { "id": "c", "text": "Very clean and seamless ecosystem", "scores": {"ECO": 2, "PREM": 1} },
+        { "id": "d", "text": "It just needs to work", "scores": {"ECO": 1} }
+      ]
+    }
+  ],
+
+  "results": [
+    {
+      "id": "power_user",
+      "primaryTrait": "PERF",
+      "text": "You’re a Power User: You want fast processing, smooth multitasking, and high performance.",
+      "recommended": "Creator laptops, gaming-capable laptops, performance workstations."
+    },
+    {
+      "id": "mobile_minimalist",
+      "primaryTrait": "PORT",
+      "text": "You’re a Mobile Minimalist: You value lightweight design and portability.",
+      "recommended": "Ultrabooks, travel-friendly thin laptops."
+    },
+    {
+      "id": "endurance_worker",
+      "primaryTrait": "BATT",
+      "text": "You’re an Endurance Worker: You want long battery life and reliability.",
+      "recommended": "Business laptops, long-battery ultrabooks."
+    },
+    {
+      "id": "ecosystem_lover",
+      "primaryTrait": "ECO",
+      "text": "You’re an Ecosystem Lover: You want simplicity, reliability, and seamless device integration.",
+      "recommended": "MacBooks, ChromeOS, minimalistic Windows devices."
+    },
+    {
+      "id": "design_enthusiast",
+      "primaryTrait": "PREM",
+      "text": "You’re a Design Enthusiast: You appreciate premium design, materials, and craftsmanship.",
+      "recommended": "Premium ultrabooks, MacBook Pro/Air, metal laptops."
+    }
+  ]
+}
