@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laptop Quiz</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="quiz">
     <header class="quiz__header">
-        <h1 class="quiz__title">Find Your Laptop Persona</h1>
+        <h1 class="quiz__title">💻 Find Your Laptop Persona</h1>
     </header>
 
     <main class="quiz__container">
         <div id="quiz-screen" class="quiz-screen"></div>
         <div id="result-screen" class="result-screen hidden"></div>
     </main>
+
+    <footer class="footer">
+        <p>Product Persona Matcher Demo — Built for concept showcase</p>
+    </footer>
 </div>
 
-<script src="quiz-data.js"></script>
-<script src="script.js"></script>
+<!-- JavaScript -->
+<script src="script.js" type="module"></script>
 
 </body>
 </html>

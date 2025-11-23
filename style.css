@@ -1,87 +1,142 @@
-/* --- Base Styles --- */
-body {
-    font-family: system-ui, sans-serif;
-    background: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    color: #222;
-    display: flex;
-    justify-content: center;
+/* --- Color Theme --- */
+:root {
+  --bg: #0f172a;
+  --card-bg: #1e293b;
+  --text: #f8fafc;
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --danger: #ef4444;
+  --font: 'Inter', sans-serif;
 }
 
-/* --- Layout Container --- */
+/* --- Base Layout (center everything vertically) --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center; /* centers vertically */
+}
+
+
+/* --- Quiz Container --- */
 .quiz {
-    width: 100%;
-    max-width: 700px;
-    padding: 20px;
+  width: 100%;
+  max-width: 650px;
+  text-align: center;
 }
 
 /* --- Header --- */
 .quiz__header {
-    text-align: center;
-    margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .quiz__title {
-    font-size: 2rem;
-    margin: 0;
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin: 0;
 }
 
-/* --- Question Card --- */
-.quiz-screen, .result-screen {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+/* --- Card Style (matches Deal Timer aesthetic) --- */
+.quiz-screen,
+.result-screen {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  transition: 0.3s ease;
 }
 
 /* --- Question Text --- */
-.question {
-    margin-bottom: 20px;
-}
-
 .question__text {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 
 /* --- Options --- */
 .option {
-    padding: 15px;
-    background: #eee;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.2s;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+  border: 1px solid transparent;
 }
 
 .option:hover {
-    background: #ddd;
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
 }
 
 .option--selected {
-    background: #007BFF;
-    color: white;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
 }
 
 /* --- Buttons --- */
 .btn {
-    display: inline-block;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    text-align: center;
-    border: none;
+  padding: 0.9rem;
+  border-radius: 0.5rem;
+  border: none;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
 }
 
 .btn--primary {
-    background: #007BFF;
-    color: white;
-    width: 100%;
-    margin-top: 20px;
+  background: var(--accent);
+  color: var(--bg);
 }
 
+.btn--primary:hover {
+  background: var(--accent-hover);
+}
+
+/* --- Result Screen --- */
+.result-screen h2 {
+  font-size: 1.6rem;
+  margin-top: 0;
+}
+
+.result-screen p {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+/* --- Footer (styled like Deal Timer) --- */
+.footer {
+  margin-top: 2rem;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* --- Utility --- */
 .hidden {
-    display: none;
+  display: none;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 480px) {
+  .quiz-screen,
+  .result-screen {
+    padding: 1.5rem;
+  }
+
+  .quiz__title {
+    font-size: 1.6rem;
+  }
 }
