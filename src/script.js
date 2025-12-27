@@ -1,19 +1,7 @@
-// Pulls data from external JSON
-const getData = async () => {
-    try {
-        console.log('Loading quiz data...')
-        const res = await fetch('./data/data.json')
-        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`)
-        const data = await res.json()
-        console.log('Quiz data loaded.')
-        return data
-    } catch (err) {
-        console.error('Failed to load quiz data:', err)
-    }
-}
+import getData from "dataFetcher"
 
-const QUIZ_DATA = await getData()
-console.log('App Ready!')
+// Parsed Quiz Data
+const QUIZ_DATA = await getData('./data/data.json')
 
 // Reusable HTML selectors
 const quizScreen = document.getElementById("quiz-screen")
@@ -112,6 +100,7 @@ const Answers = () => {
 // Initializing instances
 const Q = Question()
 const A = Answers()
+console.log('App Ready!')
 
 // Handles progess bar update
 const updateProgress = () => {
