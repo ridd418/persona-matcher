@@ -7,6 +7,8 @@
   --accent-hover: #0ea5e9;
   --danger: #ef4444;
   --font: 'Inter', sans-serif;
+  --foot: #9ca3af;
+  --link:  #6c63ff;
 }
 
 /* --- Base Layout (center everything vertically) --- */
@@ -18,12 +20,15 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
-  margin: 0;
   min-height: 100vh;
+  margin: 0 5vw;
+
+  text-align: center;
 
   display: flex;
   justify-content: center;
-  align-items: center; /* centers vertically */
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -142,11 +147,18 @@ body {
 }
 
 /* --- Footer --- */
-.quiz__footer {
-  margin-top: 2rem;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  text-align: center;
+footer a {
+  color: var(--link);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--foot);
 }
 
 /* --- Utility --- */
