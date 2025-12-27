@@ -15,8 +15,6 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
         return obj
     }, {})
 
-    console.log(scoreCard)
-
     const update = () => {
         values.question = QUIZ_DATA.questions[values.currentQIndex]
         values.questionId = values.question.id
@@ -26,11 +24,14 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
         renderQuiz(values.question)
     }
 
+    const next = () => {
+        if (values.currentQIndex >= QUIZ_DATA.questions.length - 1) return false
+        values.currentQIndex++, update()
+        return true
+    }
+
     const answer = (opt=null) => {
-        if (values.currentQIndex < QUIZ_DATA.questions.length - 1) {
-            values.currentQIndex++, update()
-        }
-        else {renderResult(QUIZ_DATA.results[0])}
+        if (!next()) { renderResult(QUIZ_DATA.results[0]) }
     }
 
     update()
@@ -39,11 +40,7 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
 
 
 
-    // const next = () => {
-    //     if (values.currentQIndex >= QUIZ_DATA.questions.length - 1) return false
-    //     values.currentQIndex++, update()
-    //     return true
-    // }
+
     // const prev = () => {
     //     if (values.currentQIndex <= 0) return
     //     values.currentQIndex--, update()
