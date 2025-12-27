@@ -9,6 +9,14 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
         optionsIds: null,
     }
 
+    const answerCache = []
+    const scoreCard = QUIZ_DATA.traits.reduce((obj, item) => {
+        obj[item] = 0
+        return obj
+    }, {})
+
+    console.log(scoreCard)
+
     const update = () => {
         values.question = QUIZ_DATA.questions[values.currentQIndex]
         values.questionId = values.question.id
