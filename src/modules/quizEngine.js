@@ -31,7 +31,12 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
     }
 
     const answer = (opt=null) => {
-        if (!next()) { renderResult(QUIZ_DATA.results[0]) }
+        if (next()) {
+            const optionScores = values.optionsArr.find(item => item.id === opt).scores
+            console.log(optionScores)
+            return
+        } 
+        renderResult(QUIZ_DATA.results[0])
     }
 
     update()
