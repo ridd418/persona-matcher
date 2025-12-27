@@ -4,7 +4,6 @@
     <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,17 +15,18 @@
 </head>
 <body>
 
-<div class="quiz">
-    <header class="quiz__header">
-        <h1 class="quiz__title" id="quiz__title"></h1>
+<!-- Main App -->
+<div class="container">
+    <header class="header">
+        <h1 class="quiz-title" id="quiz-title"></h1>
     </header>
 
-    <main class="quiz__container">
-        <div class="quiz-progress">
-            <div class="progress__fill"></div>
-        </div>
-        <div id="quiz-screen" class="quiz-screen"></div>
-        <div id="result-screen" class="result-screen hidden"></div>
+    <main>
+        <section class="quiz-progress">
+            <div class="progress-fill"></div>
+        </section>
+        <!-- Quiz question section -->
+        <section id="display" class="quiz-screen result-screen"></section>
     </main>
 </div>
 
@@ -40,7 +40,8 @@
 <script type="importmap"> 
     {
         "imports": {
-            "dataFetcher": "./modules/dataFetcher.js"
+            "dataFetcher": "./modules/dataFetcher.js",
+            "quizEngine": "./modules/quizEngine.js"
         }
     }
 </script>
