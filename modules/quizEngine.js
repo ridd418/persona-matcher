@@ -33,7 +33,11 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
     const answer = (opt=null) => {
         if (next()) {
             const optionScores = values.optionsArr.find(item => item.id === opt).scores
-            console.log(optionScores)
+            Object.keys(optionScores).forEach(trait => {
+                scoreCard[trait] += optionScores[trait]
+            })
+            // last answer trait not adding to the scoreCard
+            console.log(optionScores, scoreCard)
             return
         } 
         renderResult(QUIZ_DATA.results[0])
