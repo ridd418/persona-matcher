@@ -1,0 +1,8 @@
+services:
+  ngx-ws:
+    image: nginx:alpine
+    restart: unless-stopped
+    volumes:
+      - ./src/:/usr/share/nginx/html/:ro
+    ports:
+      - "4000:80"
