@@ -30,17 +30,27 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
         return true
     }
 
-    const answer = (opt=null) => {
-        if (next()) {
-            const optionScores = values.optionsArr.find(item => item.id === opt).scores
-            Object.keys(optionScores).forEach(trait => {
-                scoreCard[trait] += optionScores[trait]
-            })
-            // last answer trait not adding to the scoreCard
-            console.log(optionScores, scoreCard)
-            return
-        } 
-        renderResult(QUIZ_DATA.results[0])
+    const answer = (opt = null) => {
+        const selected = values.optionsArr.find(item => item.id === opt)
+        if (!selected) return
+
+        const optionScores = selected.scores || {}
+        Object.keys(optionScores).forEach(trait => {
+            if (!(trait in scoreCard)) scoreCard[trait] = 0
+            scoreCard[trait] += optionScores[trait]
+        })
+
+        answerCache.push(optionScores)
+        // console.log(optionScores, scoreCard)
+
+        if (next()) return
+
+        const highestTrait = Object.keys(scoreCard).reduce((highest, current) =>
+            scoreCard[current] > scoreCard[highest] ? current : highest
+        )
+        // console.log(highestTrait)
+        const result = QUIZ_DATA.results.find(item => item.primaryTrait === highestTrait) || QUIZ_DATA.results[0]
+        renderResult(result)
     }
 
     update()
