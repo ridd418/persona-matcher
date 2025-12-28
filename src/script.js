@@ -16,7 +16,8 @@ const renderQuiz = (question) => {
             </div>
         `).join("")
 
-    const backBtnState = question.id === 'q1' ? 'disabled' : ''
+    // const backBtnState = question.id === 'q1' ? 'disabled' : ''
+    const backBtnState = 'disabled'
 
     quizScreen.innerHTML = `
         <div class="question">
