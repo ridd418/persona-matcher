@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main App -->
+    <div class="container">
+        <header class="header">
+            <h1 class="quiz-title" id="quiz-title"></h1>
+        </header>
+
+        <main>
+            <section class="quiz-progress">
+                <div class="progress-fill"></div>
+            </section>
+            <!-- Quiz question section -->
+            <section id="display" class="quiz-screen result-screen"></section>
+        </main>
+    </div>
+
+    <!-- Footnotes -->
+    <footer>
+        <p>Persona Matcher Demo &mdash; Built for concept showcase</p>
+        <p>&copy; 2025 Ridd418 &#124; <a href="https://github.com/ridd418/persona-matcher" target="_blank" rel="noopener noreferrer"><strong>GitHub</strong></a></p>
+    </footer>
+
+    <!-- Importmap -->
+    <script type="importmap"> 
+        {
+            "imports": {
+                "dataFetcher": "./modules/dataFetcher.js",
+                "quizEngine": "./modules/quizEngine.js"
+            }
+        }
+    </script>
+
+    <!-- JavaScript -->
+    <script src="script.js" type="module" defer></script>
+
+</body>
+</html>

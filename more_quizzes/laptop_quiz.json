@@ -40,7 +40,7 @@
       "id": "q4",
       "text": "Which style matches you best?",
       "options": [
-        { "id": "a", "text": "Practical and functional", "scores": {} },
+        { "id": "a", "text": "Practical and functional", "scores": {"PERF": 2} },
         { "id": "b", "text": "Modern and minimalistic", "scores": {"PORT": 1, "ECO": 1, "PREM": 1} },
         { "id": "c", "text": "Trendy and polished", "scores": {"PREM": 2} },
         { "id": "d", "text": "Rugged and durable", "scores": {"BATT": 1} }
