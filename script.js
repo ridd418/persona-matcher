@@ -9,6 +9,13 @@ const quizScreen = document.getElementById("display")
 const progressFill = document.querySelector(".progress-fill")
 
 // Utility Functions
+const updateProgress = (currentQIndex) => {
+    const current = currentQIndex + 1 // 1-based
+    const total = QUIZ_DATA.questions.length
+    const pct = (current / total) * 100
+    progressFill.style.width = pct + "%"
+}
+
 const renderQuiz = (question) => {
     const opts = question.options.map(opt => `
             <div class="option" data-id="${opt.id}">
@@ -29,6 +36,7 @@ const renderQuiz = (question) => {
             </div>
         </div>
     `
+    updateProgress(QUIZ_DATA.questions.indexOf(question))
 }
 
 const renderResult = (result) => {
@@ -38,6 +46,7 @@ const renderResult = (result) => {
         <h3>Recommended Types:</h3>
         <p>${result.recommended}</p>
     `
+    progressFill.parentElement.style.display = 'none'
 }
 
 const quiz = startQuiz(QUIZ_DATA, renderQuiz, renderResult)
