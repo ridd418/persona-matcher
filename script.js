@@ -49,7 +49,7 @@ quizScreen.addEventListener('click', (e) => {
     const dataId = e.target.dataset.id
 
     if (id !== 'backBtn' && !dataId) return
-    if (quiz.get('optionsIds').includes(dataId)) quiz.answer(dataId)
+    if (dataId) quiz.answer(dataId)
     if (id) quiz.goBack()
     // if (Q.get('optionsIds').includes(dataId)) A.answered(dataId)
 })

@@ -3,10 +3,7 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
     const values = {
         currentQIndex: 0,
         question: null,
-        questionId: null,
-        questionText: null,
         optionsArr: null,
-        optionsIds: null,
     }
 
     const answerCache = []
@@ -17,10 +14,7 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
 
     const update = () => {
         values.question = QUIZ_DATA.questions[values.currentQIndex]
-        values.questionId = values.question.id
-        values.questionText = values.question.text
         values.optionsArr = values.question.options
-        values.optionsIds = values.optionsArr.map(opt => opt.id)
 
         renderQuiz(values.question)
     }
@@ -70,11 +64,9 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
         // console.log(lastScores, answerCache, scoreCard)
     }
 
-    const get = v => values[v]
-
     update()
     
-    return { answer, goBack, get }
+    return { answer, goBack}
 }
 
 export default startQuiz
