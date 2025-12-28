@@ -16,8 +16,8 @@ const renderQuiz = (question) => {
             </div>
         `).join("")
 
-    // const backBtnState = question.id === 'q1' ? 'disabled' : ''
-    const backBtnState = 'disabled'
+    const backBtnState = question.id === 'q1' ? 'disabled' : ''
+    // const backBtnState = 'disabled'
 
     quizScreen.innerHTML = `
         <div class="question">
@@ -49,8 +49,8 @@ quizScreen.addEventListener('click', (e) => {
     const dataId = e.target.dataset.id
 
     if (id !== 'backBtn' && !dataId) return
-    if (dataId) quiz.answer(dataId)
-    // if (id) A.goBack()
+    if (quiz.get('optionsIds').includes(dataId)) quiz.answer(dataId)
+    if (id) quiz.goBack()
     // if (Q.get('optionsIds').includes(dataId)) A.answered(dataId)
 })
 

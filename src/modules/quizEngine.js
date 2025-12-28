@@ -21,6 +21,7 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
         values.questionText = values.question.text
         values.optionsArr = values.question.options
         values.optionsIds = values.optionsArr.map(opt => opt.id)
+
         renderQuiz(values.question)
     }
 
@@ -30,7 +31,13 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
         return true
     }
 
-    const answer = (opt = null) => {
+    const prev = () => {
+        if (values.currentQIndex <= 0) return false
+        values.currentQIndex--, update()
+        return true
+    }
+
+    const answer = (opt) => {
         const selected = values.optionsArr.find(item => item.id === opt)
         if (!selected) return
 
@@ -53,26 +60,21 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
         renderResult(result)
     }
 
+    const goBack = () => {
+        const lastScores = answerCache.pop()
+        if (!lastScores) return
+
+        Object.keys(lastScores).forEach(trait => {
+            scoreCard[trait] -= lastScores[trait]
+        }), prev(), update()
+        // console.log(lastScores, answerCache, scoreCard)
+    }
+
+    const get = v => values[v]
+
     update()
     
-    return { answer }
-
-
-
-
-    // const prev = () => {
-    //     if (values.currentQIndex <= 0) return
-    //     values.currentQIndex--, update()
-    // }
-
-    // const get = v => values[v]
-
-
-    
-
-
-    
-    // return {next, prev, get}
+    return { answer, goBack, get }
 }
 
 export default startQuiz
