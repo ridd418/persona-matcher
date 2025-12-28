@@ -1,5 +1,7 @@
+// Quiz Factory
 const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
 
+    // Instance Variables
     const values = {
         currentQIndex: 0,
         question: null,
@@ -12,6 +14,7 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
         return obj
     }, {})
 
+    // Helper Functions
     const update = () => {
         values.question = QUIZ_DATA.questions[values.currentQIndex]
         values.optionsArr = values.question.options
@@ -31,6 +34,7 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
         return true
     }
 
+    // Methods
     const answer = (opt) => {
         const selected = values.optionsArr.find(item => item.id === opt)
         if (!selected) return
@@ -64,6 +68,7 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
         // console.log(lastScores, answerCache, scoreCard)
     }
 
+    // Instance Init
     update()
     
     return { answer, goBack}
