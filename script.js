@@ -8,7 +8,7 @@ const QUIZ_DATA = await getData('./data/data.json')
 const quizScreen = document.getElementById("display")
 const progressFill = document.querySelector(".progress-fill")
 
-// Utility Functions
+// Renders
 const updateProgress = (currentQIndex) => {
     const current = currentQIndex + 1 // 1-based
     const total = QUIZ_DATA.questions.length
@@ -49,10 +49,13 @@ const renderResult = (result) => {
     progressFill.parentElement.style.display = 'none'
 }
 
+// Initialization
+document.title = QUIZ_DATA.title
+document.getElementById('quiz-title').textContent = QUIZ_DATA.header
 const quiz = startQuiz(QUIZ_DATA, renderQuiz, renderResult)
 console.log('App Ready!')
 
-// Single EventListener to handle all click events
+// Event Manager
 quizScreen.addEventListener('click', (e) => {
     const id = e.target.id
     const dataId = e.target.dataset.id
