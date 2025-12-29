@@ -1,9 +1,9 @@
 // Quiz Factory
-const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
+const startQuiz = (QUIZ_DATA, onQuestionChange, onQuizComplete) => {
 
     // Instance Variables
-    const values = {
-        currentQIndex: 0,
+    const state = {
+        index: 0,
         question: null,
         optionsArr: null,
     }
@@ -16,27 +16,27 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
 
     // Helper Functions
     const update = () => {
-        values.question = QUIZ_DATA.questions[values.currentQIndex]
-        values.optionsArr = values.question.options
+        state.question = QUIZ_DATA.questions[state.index]
+        state.optionsArr = state.question.options
 
-        renderQuiz(values.question)
+        onQuestionChange(state.question)
     }
 
     const next = () => {
-        if (values.currentQIndex >= QUIZ_DATA.questions.length - 1) return false
-        values.currentQIndex++, update()
+        if (state.index >= QUIZ_DATA.questions.length - 1) return false
+        state.index++, update()
         return true
     }
 
     const prev = () => {
-        if (values.currentQIndex <= 0) return false
-        values.currentQIndex--, update()
+        if (state.index <= 0) return false
+        state.index--, update()
         return true
     }
 
     // Methods
     const answer = (opt) => {
-        const selected = values.optionsArr.find(item => item.id === opt)
+        const selected = state.optionsArr.find(item => item.id === opt)
         if (!selected) return
 
         const optionScores = selected.scores || {}
@@ -55,7 +55,7 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
         )
         // console.log(highestTrait)
         const result = QUIZ_DATA.results.find(item => item.primaryTrait === highestTrait) || QUIZ_DATA.results[0]
-        renderResult(result)
+        onQuizComplete(result)
     }
 
     const goBack = () => {
@@ -64,14 +64,14 @@ const startQuiz = (QUIZ_DATA, renderQuiz, renderResult) => {
 
         Object.keys(lastScores).forEach(trait => {
             scoreCard[trait] -= lastScores[trait]
-        }), prev(), update()
+        }), prev()
         // console.log(lastScores, answerCache, scoreCard)
     }
 
     // Instance Init
     update()
     
-    return { answer, goBack}
+    return { answer, goBack }
 }
 
 export default startQuiz
