@@ -48,10 +48,17 @@ const renderResult = (result) => {
 }
 
 // Initialization
-document.title = QUIZ_DATA.title
-document.getElementById('quiz-title').textContent = QUIZ_DATA.header
-const quiz = startQuiz(QUIZ_DATA, renderQuiz, renderResult)
-console.log('App Ready!')
+const initQuiz = (data) => {
+  if (!data) return null
+
+  document.title = data.title
+  document.getElementById('quiz-title').textContent = data.header
+  console.log('App Ready!')
+
+  return startQuiz(data, renderQuiz, renderResult)
+}
+
+const quiz = initQuiz(QUIZ_DATA)
 
 // Event Manager
 quizScreen.addEventListener('click', (e) => {
@@ -59,8 +66,8 @@ quizScreen.addEventListener('click', (e) => {
     const dataId = e.target.dataset.id
 
     if (id !== 'backBtn' && !dataId) return
-    if (dataId) quiz.answer(dataId)
-    if (id) quiz.goBack()
+    if (dataId) quiz?.answer(dataId)
+    if (id) quiz?.goBack()
 })
 
 // Freeze test
