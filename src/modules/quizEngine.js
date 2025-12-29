@@ -19,7 +19,7 @@ const startQuiz = (QUIZ_DATA, onQuestionChange, onQuizComplete) => {
         state.question = QUIZ_DATA.questions[state.index]
         state.optionsArr = state.question.options
 
-        onQuestionChange(state.question)
+        onQuestionChange({ index : state.index, question : state.question })
     }
 
     const next = () => {

@@ -9,21 +9,21 @@ const quizScreen = document.getElementById("display")
 const progressFill = document.querySelector(".progress-fill")
 
 // Renders
-const updateProgress = (currentQIndex) => {
-    const current = currentQIndex + 1 // 1-based
+const updateProgress = (index) => {
+    const current = index + 1 // 1-based
     const total = QUIZ_DATA.questions.length
     const pct = (current / total) * 100
     progressFill.style.width = pct + "%"
 }
 
-const renderQuiz = (question) => {
+const renderQuiz = ({question, index}) => {
     const opts = question.options.map(opt => `
             <div class="option" data-id="${opt.id}">
                 ${opt.text}
             </div>
         `).join("")
 
-    const backBtnState = question.id === 'q1' ? 'disabled' : ''
+    const backBtnState = index === 0 ? 'disabled' : ''
     // const backBtnState = 'disabled'
 
     quizScreen.innerHTML = `
@@ -35,7 +35,7 @@ const renderQuiz = (question) => {
             <button class="btn btn-primary" id="backBtn" ${backBtnState}>Back</button>
         </div>
     `
-    updateProgress(QUIZ_DATA.questions.indexOf(question))
+    updateProgress(index)
 }
 
 const renderResult = (result) => {
