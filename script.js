@@ -24,7 +24,6 @@ const renderQuiz = ({question, index}) => {
         `).join("")
 
     const backBtnState = index === 0 ? 'disabled' : ''
-    // const backBtnState = 'disabled'
 
     quizScreen.innerHTML = `
         <div class="question">
@@ -63,3 +62,7 @@ quizScreen.addEventListener('click', (e) => {
     if (dataId) quiz.answer(dataId)
     if (id) quiz.goBack()
 })
+
+// Freeze test
+// console.log(Object.isFrozen(QUIZ_DATA)) 
+// QUIZ_DATA.questions[0].options[0].scores.PERF = 100
